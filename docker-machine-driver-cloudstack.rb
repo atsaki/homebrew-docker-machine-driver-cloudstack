@@ -3,15 +3,15 @@ require "language/go"
 class DockerMachineDriverCloudstack < Formula
   desc "Docker Machine generic CloudStack driver"
   homepage "https://github.com/atsaki/docker-machine-driver-cloudstack"
-  url "https://github.com/atsaki/docker-machine-driver-cloudstack/archive/v0.1.2.tar.gz"
-  version "v0.1.2"
-  sha256 "82c54f8407ad77cc2c845873e24a6d1ffc86a30297f5d85c492d2ea48770e481"
+  url "https://github.com/atsaki/docker-machine-driver-cloudstack/archive/v0.1.3.tar.gz"
+  version "v0.1.3"
+  sha256 "d6cd0758d9f88b838ef289d6a655e7396acafcf9419d05e23d0e06fdae3447de"
   head "https://github.com/atsaki/docker-machine-driver-cloudstack.git"
 
   bottle do
     root_url "https://bintray.com/artifact/download/atsaki/bottles"
     cellar :any_skip_relocation
-    sha256 "01775664442896539fd4433f3ad6dbb412d6231f5cb7657c3cb0933147aaf914" => :yosemite
+    sha256 "79a1b3df1bef7a434456163f6d623d74f98fb659fa05f5c2e5ee371d3e6a1934" => :yosemite
   end
 
   depends_on "go" => :build
