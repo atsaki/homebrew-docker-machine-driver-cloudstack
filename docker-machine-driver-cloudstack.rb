@@ -3,27 +3,27 @@ require "language/go"
 class DockerMachineDriverCloudstack < Formula
   desc "Docker Machine generic CloudStack driver"
   homepage "https://github.com/atsaki/docker-machine-driver-cloudstack"
-  url "https://github.com/atsaki/docker-machine-driver-cloudstack/archive/v0.1.3.tar.gz"
-  version "v0.1.3"
-  sha256 "d6cd0758d9f88b838ef289d6a655e7396acafcf9419d05e23d0e06fdae3447de"
+  url "https://github.com/atsaki/docker-machine-driver-cloudstack/archive/v0.1.4.tar.gz"
+  version "v0.1.4"
+  sha256 "f956a1df446aebe2edeb41033fadb97e332b61099e650a84c693ed737a1d9515"
   head "https://github.com/atsaki/docker-machine-driver-cloudstack.git"
 
   bottle do
     root_url "https://bintray.com/artifact/download/atsaki/bottles"
     cellar :any_skip_relocation
-    sha256 "79a1b3df1bef7a434456163f6d623d74f98fb659fa05f5c2e5ee371d3e6a1934" => :yosemite
+    sha256 "9191224b8fa0894e167f5391dd245cc4bd95871372c1e7f130481dfec01cb095" => :el_capitan
   end
 
   depends_on "go" => :build
 
   go_resource "github.com/docker/docker" do
     url "https://github.com/docker/docker.git",
-      :revision => "a34a1d598c6096ed8b5ce5219e77d68e5cd85462"
+      :revision => "a8a31eff10544860d2188dddabdee4d727545796"
   end
 
   go_resource "github.com/docker/machine" do
     url "https://github.com/docker/machine.git",
-      :revision => "7e8e38e1485187c0064e054029bb1cc68c87d39a"
+      :revision => "a650a404fc3e006fea17b12615266168db79c776"
   end
 
   go_resource "golang.org/x/crypto" do
